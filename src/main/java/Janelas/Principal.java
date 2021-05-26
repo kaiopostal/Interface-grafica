@@ -17,8 +17,8 @@ import javax.swing.JOptionPane;
  */
 public class Principal extends javax.swing.JFrame {
     
-    Veiculo vei;
-    Cliente cli;
+    Veiculo vei = new Veiculo();
+    Cliente cli = new Cliente();
 
     /**
      * Creates new form Principal
@@ -154,23 +154,23 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JbCadVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadVeiculoActionPerformed
-        vei = new Veiculo();
+       
         CadVeiculo cv = new CadVeiculo(vei);
         cv.setVisible(true);
     }//GEN-LAST:event_JbCadVeiculoActionPerformed
 
     private void JbCadClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JbCadClienteActionPerformed
-        cli = new Cliente();
+        
         CadCliente cc = new CadCliente(cli);
         cc.setVisible(true);
     }//GEN-LAST:event_JbCadClienteActionPerformed
 
     private void jBMostrarVeiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostrarVeiActionPerformed
-            JOptionPane.showMessageDialog(this,vei.getFabricante() );
+            JOptionPane.showMessageDialog(this,vei.getFabricante() + "\n" + vei.getModelo() + "\n" + vei.getPreco() + "\n") ;
     }//GEN-LAST:event_jBMostrarVeiActionPerformed
 
     private void jBMostrarcliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBMostrarcliActionPerformed
-           JOptionPane.showMessageDialog(this,cli.getNome());
+           JOptionPane.showMessageDialog(this,cli.getNome() + "\n" + cli.getEndereco() + "\n" + cli.getCpf() + "\n" + cli.getTelefone());
     }//GEN-LAST:event_jBMostrarcliActionPerformed
 
     /**
