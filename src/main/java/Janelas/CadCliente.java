@@ -166,7 +166,7 @@ public class CadCliente extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBCadastrarActionPerformed
-        Cliente cli = new Cliente();
+       
         cli.setNome(jTNome.getText());
         cli.setEndereco(jTEndereco.getText());
         cli.setCpf(jTCpf.getText());
